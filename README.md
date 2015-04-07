@@ -1,6 +1,6 @@
 # node2mqtt
 
-Popularność wiadomości [MQTT](http://en.wikipedia.org/wiki/MQTT) spowodowała, że powstaje wiele ciekawych projektów pozwalających na zbieranie i analizowanie danych z czujników. Ciekawym przykładem jest tu projekt [OpenHAB](http://www.openhab.org/). node2mqtt jest aplikacja przekazująca dane z czujników w postaci wiadomości MQTT do tychże programów.
+Popularność wiadomości [MQTT](http://en.wikipedia.org/wiki/MQTT) spowodowała, że powstaje wiele ciekawych projektów pozwalających na zbieranie i analizowanie danych z czujników. Ciekawym przykładem jest tu projekt [OpenHAB](http://www.openhab.org/). node2mqtt jest aplikacja przekazująca dane z czujników w postaci wiadomości MQTT.
 
 ## Wymagania
 
@@ -49,6 +49,13 @@ Pliki konfiguracyjne aplikacji znajduja sie w *static/conf*.
 
      $ cd sensmon
      $ screen -d -m python2 node2mqtt.py
+     
+### Wiadomości MQTT
+Wiadomości wychodzące mają postać "/node_name/sensor" "wartość" np:.
+
+    /lab/batvol 3.7
+    /lab/humi 45.5
+    /powernode/power 300
 
 ### Plany
 
