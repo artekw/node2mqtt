@@ -1,10 +1,10 @@
 # node2mqtt
 
-Popularność wiadomości MQTT spowodowała, że powstaje wiele ciekawych projektów pozwalających na zbieranie i analizowanie danych z czujników. Ciekawym przykładem jest tu projekt OpenHAB. node2mqtt jest aplikacja przekazująca dane z czujników w postaci wiadomości MQTT.
+Popularność wiadomości [MQTT](http://en.wikipedia.org/wiki/MQTT) spowodowała, że powstaje wiele ciekawych projektów pozwalających na zbieranie i analizowanie danych z czujników. Ciekawym przykładem jest tu projekt [OpenHAB](http://www.openhab.org/). node2mqtt jest aplikacja przekazująca dane z czujników w postaci wiadomości MQTT do tychże programów.
 
 ## Wymagania
 
-node2mqtt działa tylko na systemie Linuks. Do działania potrzebuje Pythona 2.x oraz kilka innych zewnętrznych aplikacji, m.in.
+node2mqtt pisany był w środowisku Linuks, więc zakłada się, że działa tylko po nim. Do poprawnej pracy potrzebuje Pythona 2.x oraz kilka innych zewnętrznych aplikacji, m.in.
 
 - python
 - python-simplejson
