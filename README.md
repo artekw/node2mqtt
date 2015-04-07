@@ -23,7 +23,7 @@ Debian wymaga jeszcze:
 Przykład instalacji dla Debiana/Ubuntu:
 
     $ sudo apt-get install python screen git ser2net python-pip python-dev build-essential
-    $ sudo pip-2.7 install simplejson tornado tornado-redis paho-mqtt
+    $ sudo pip-2.7 install simplejson tornado paho-mqtt
 
 
 ### Transmisja szeregowa (UART)
