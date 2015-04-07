@@ -1,0 +1,10 @@
+{
+    "broker": {
+      "hostname": "192.168.88.7",
+      "port": "1883"
+    },
+    "serial": {
+      "port": 2000,
+      "host": "localhost"
+    }
+}
