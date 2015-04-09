@@ -26,7 +26,7 @@ ci = config(init=True)
 
 define("broker_port",default=config().get("app", ['broker', 'port']),
 		help="mosquitto hostname", type=int)
-define("broker_hostname",default=config().get("app", ['brokde', 'hostname']),
+define("broker_hostname",default=config().get("app", ['broker', 'hostname']),
 		help="mosquitto port")
 
 

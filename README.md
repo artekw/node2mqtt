@@ -14,7 +14,7 @@ node2mqtt pisany był w środowisku Linuks, więc zakłada się, że działa tyl
 - screen
 - paho-mqtt
 
-Debian wymaga jeszcze:
+Debian może wymagać jeszcze:
 
 - python-dev
 - build-essential
@@ -28,7 +28,7 @@ Przykład instalacji dla Debiana/Ubuntu:
 
 ### Transmisja szeregowa (UART)
 
-Surowe dane z czujników należy przekierować z UART do TCP. do tego celu służy aplikacja ser2net. 
+Surowe dane z czujników należy przekierować z UART do TCP, do tego celu służy aplikacja ser2net. 
 
 Zalecane ustawienie w pliku /etc/ser2net.conf:
 
