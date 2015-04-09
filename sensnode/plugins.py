@@ -4,6 +4,7 @@
 import imp
 import os
 import logging
+import logs
 
 APPNAME = 'node2mqtt'
 

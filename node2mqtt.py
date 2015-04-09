@@ -6,7 +6,6 @@ version = '0.1-dev'
 app_name = 'node2mtqq'
 
 import os
-#import logging
 import simplejson as json
 import multiprocessing # http://pymotw.com/2/multiprocessing
 
@@ -16,7 +15,7 @@ import tornado.gen
 from tornado.options import define, options
 
 # sensnode
-import sensnode.decoder, sensnode.connect
+import sensnode.decoder, sensnode.connect, sensnode.logs
 from sensnode.config import config
 
 import paho.mqtt.publish as mqtt

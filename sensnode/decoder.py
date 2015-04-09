@@ -7,6 +7,7 @@ import simplejson as json
 from collections import OrderedDict
 
 import logging
+import logs
 from config import config
 from plugins import plugins
 
