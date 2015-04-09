@@ -5,7 +5,7 @@ import imp
 import os
 import logging
 
-APPNAME = 'sensmon'
+APPNAME = 'node2mqtt'
 
 instance = None
 

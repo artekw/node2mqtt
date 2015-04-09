@@ -13,7 +13,7 @@ class Connect(multiprocessing.Process):
 
     """Odczyt danych z punktow"""
     def __init__(self, taskQ, resultQ, debug=False):
-        self._logger = logging.getLogger(__name__)
+        #self.logger = logging.getLogger(__name__)
         multiprocessing.Process.__init__(self)
         self.taskQ = taskQ
         self.resultQ = resultQ
@@ -25,7 +25,7 @@ class Connect(multiprocessing.Process):
             port = config().get("app", ['serial', 'port'])
 
             if self.debug:
-                self._logger.debug('Trying connect to %s:%s' % (host, str(port)))
+                logging.debug('Trying connect to %s:%s' % (host, str(port)))
         except:
             print "Can't read from config."
             sys.exit(3)
@@ -36,12 +36,12 @@ class Connect(multiprocessing.Process):
             self.connected = True
 
             if self.debug:
-                self._logger.debug('Connected to %s:%s' % (host, str(port)))
+                logging.debug('Connected to %s:%s' % (host, str(port)))
 
         except socket.error:
             self.connected = False
 
-            self._logger.warning("Can't connect to %s:%s" % (host, str(port)))
+            logging.warning("Can't connect to %s:%s" % (host, str(port)))
             sys.exit(3)
 
     def is_connected(self):
@@ -72,11 +72,11 @@ class Connect(multiprocessing.Process):
                     task = self.parseInput(self.taskQ.get())
                     self.soc.sendall(task)
                     if self.debug:
-                        self._logger.info("Put task in queue: %s" % task)
+                        self.logger.info("Put task in queue: %s" % task)
                 # odbiór
                 self.resultQ.put(self.serialread())
             if self.debug:
-                self._logger.info("Put result in queue: %s" % line)
+                self.logger.info("Put result in queue: %s" % line)
         else:
             print "Not connected!"
 

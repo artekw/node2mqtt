@@ -6,7 +6,7 @@ version = '0.1-dev'
 app_name = 'node2mtqq'
 
 import os
-import logging
+#import logging
 import simplejson as json
 import multiprocessing # http://pymotw.com/2/multiprocessing
 
@@ -48,7 +48,7 @@ def main():
     taskQ = multiprocessing.Queue()
     resultQ = multiprocessing.Queue()
 
-    connect = sensnode.connect.Connect(taskQ, resultQ, debug=debug)
+    connect = sensnode.connect.Connect(taskQ, resultQ, debug=False)
     connect.daemon = True
     connect.start()
 
